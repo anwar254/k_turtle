@@ -1,0 +1,47 @@
+kturtle-script-v1.0
+@(reset)
+@(spritehide)
+
+$var = @(random) 1@(,)100
+
+$predict = @(round)($var)
+
+
+
+$count = 1
+
+@(for) $x = $count @(to) 6{
+  $userpredict = @(ask) "guess a number between 1-100    " + "you have " + $count + " trial left!"
+
+  $count = $count+1
+  @(if) $userpredict < $predict{
+    @(message) "guess a bit higher"
+  }
+
+  @(if) $userpredict > $predict{
+    @(message) "guess a bit lower"
+  }
+
+  @(if) $userpredict == $predict{
+    @(message) "congrats!!! you are a guessing guru :D"
+    @(break)
+  }
+
+  @(if) $count == 5{
+    
+    $userpredict = @(ask) "guess a number between 1-100    " + $count + " is the last count"
+
+      @(message) "game over!!!"
+      @(message) "Better luck next time"
+
+
+  @(break)
+
+  }
+  
+}
+
+
+
+
+

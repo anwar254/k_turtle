@@ -1,0 +1,26 @@
+kturtle-script-v1.0
+#removing sprite from the canvarse
+@(spritehide) 
+
+#the genders
+$f = "female"
+$m = "male"
+
+#input for the user
+$gender = @(ask) "what's tour gender"
+
+#test if it's female
+#test if the user has a capital letter
+@(if) ($gender == $f) @(or) ($gender == "Female"){
+  @(message) "you are beautiful"
+}
+
+#test if it's male
+#test if the user has a capital letter
+@(if) ($gender == $m) @(or) ($gender == "Male"){
+  @(message) "you are handsome"
+}
+ 
+@(if) ($gender != $f ) @(or) ($gender != $m){
+  @(message) "invalid input"
+}

@@ -1,0 +1,11 @@
+kturtle-script-v1.0
+@(spritehide)
+
+#this programe asks the user for their name and then displays it as a greeting.
+
+$name = @(ask) "whats your name"
+
+$message = "hello" + " " + $name + " " + "how are you doing?"
+
+@(message) $message 
+
